@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <div class="hero">
+    <div class="hero wrapper">
       <div class="hero-content">
         <img src="./img/logo.svg" alt="logo" srcset="" />
         <p class="hero-text">
@@ -22,7 +22,7 @@
         <img src="./img/Frame 432528494.png" alt="mobile" />
       </div>
     </div>
-    <div class="about">
+    <div class="about wrapper">
       <div class="about-video">
         <div class="video-frame">
           <img src="./img/video-frame.svg" alt="" srcset="" />
@@ -61,10 +61,10 @@
         </div>
       </div>
     </div>
-    <div class="features">
+    <div class="features wrapper">
       <div class="features-cards">
         <div class="features-title">SOLUTIONS</div>
-        <div class="feature-card active" data-image="1.png">
+        <div class="feature-card active" data-image="1.svg">
           <div class="feature-card-title">Reference Book</div>
           <ul class="feature-card-list">
             <li>Comprehensive health and development information.</li>
@@ -72,7 +72,7 @@
             <li>Tracks development from birth to age 18.</li>
           </ul>
         </div>
-        <div class="feature-card" data-image="2.png">
+        <div class="feature-card" data-image="2.svg">
           <div class="feature-card-title">Documents storage</div>
           <ul class="feature-card-list">
             <li>
@@ -89,7 +89,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature-card" data-image="3.png">
+        <div class="feature-card" data-image="3.svg">
           <div class="feature-card-title">Symptom calendar</div>
           <ul class="feature-card-list">
             <li>
@@ -100,7 +100,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature-card" data-image="4.png">
+        <div class="feature-card" data-image="4.svg">
           <div class="feature-card-title">Children’s Profile</div>
           <ul class="feature-card-list">
             <li>
@@ -112,37 +112,117 @@
         </div>
       </div>
       <div class="features-images">
-        <div class="feature-image-frame">
-          <img src="./img/mobile-frame.svg" alt="" srcset="" />
-        </div>
-        <div class="feature-image-wrapper">
-          <img src="./img/1.png" alt="" srcset="" width="300" />
-        </div>
+        <img src="./img/1.png" alt="" srcset="" width="300" />
       </div>
     </div>
+    <div class="features-mobile wrapper">
+      <div class="features-controls">
+        <div class="feature-control active" data-image="1.svg">
+          <div class="feature-title-container">
+            <div class="arrow-left">
+              <img src="./img/arrowLeft.svg" alt="" srcset="" />
+            </div>
+            <div class="feature-control-title">Reference Book</div>
+            <div class="arrow-right">
+              <img src="./img/arrowRight.svg" alt="" srcset="" />
+            </div>
+          </div>
+          <ul class="feature-control-list">
+            <li>Comprehensive health and development information.</li>
+            <li>Based on professional sources like WHO, AAP, etc.</li>
+            <li>Tracks development from birth to age 18.</li>
+          </ul>
+        </div>
+        <div class="feature-control" data-image="2.svg">
+          <div class="feature-title-container">
+            <div class="arrow-left">
+              <img src="./img/arrowLeft.svg" alt="" srcset="" />
+            </div>
+            <div class="feature-control-title">Documents storage</div>
+            <div class="arrow-right">
+              <img src="./img/arrowRight.svg" alt="" srcset="" />
+            </div>
+          </div>
+          <ul class="feature-control-list">
+            <li>
+              Provides parents with constant access to their child’s health
+              information.
+            </li>
+            <li>
+              Encryption of data accessible only to the account and its family.
+            </li>
+            <li>Data storage in secure AWS cloud services.</li>
+            <li>
+              TBD: certification for compliance with American and European
+              standards.
+            </li>
+          </ul>
+        </div>
+        <div class="feature-control" data-image="3.svg">
+          <div class="feature-title-container">
+            <div class="arrow-left">
+              <img src="./img/arrowLeft.svg" alt="" srcset="" />
+            </div>
+            <div class="feature-control-title">Symptom calendar</div>
+            <div class="arrow-right">
+              <img src="./img/arrowRight.svg" alt="" srcset="" />
+            </div>
+          </div>
+          <ul class="feature-control-list">
+            <li>
+              Logs symptoms, doctor appointments, medications, and vaccinations.
+            </li>
+            <li>
+              Upload and share medical history and questionnaires with doctors.
+            </li>
+          </ul>
+        </div>
+        <div class="feature-control" data-image="4.svg">
+          <div class="feature-title-container">
+            <div class="arrow-left">
+              <img src="./img/arrowLeft.svg" alt="" srcset="" />
+            </div>
+            <div class="feature-control-title">Children’s Profile</div>
+            <div class="arrow-right">
+              <img src="./img/arrowRight.svg" alt="" srcset="" />
+            </div>
+          </div>
+          <ul class="feature-control-list">
+            <li>
+              A child profile enabling parents to share their child’s medical
+              information with their pediatrician.
+            </li>
+            <li>Upload just in two clicks.</li>
+          </ul>
+        </div>
+      </div>
 
+      <div class="features-mobile-images">
+        <img src="./img/1.svg" alt="" width="300" id="feature-image" />
+      </div>
+    </div>
     <div class="contact">
       <h2 class="contact-title">Contact us</h2>
       <div class="social-container">
         <div class="social-item">
-          <div class="social-img">
-            <img src="./img/devicon_linkedin.svg" alt="" srcset="" />
-          </div>
           <a
-            href="http://"
+            href="https://www.linkedin.com/company/kidgurustartup"
             target="_blank"
-            rel="noopener noreferrer"
             class="social-link"
-            >Kidguru - Linkedin</a
           >
+            <div class="social-img">
+              <img src="./img/devicon_linkedin.svg" alt="" srcset="" />
+            </div>
+            Kidguru - Linkedin
+          </a>
         </div>
         <div class="social-item">
-          <div class="social-img">
-            <img src="./img/twemoji_e-mail.svg" alt="" srcset="" />
-          </div>
-          <a href="mailto:hello@kidguru.com" class="social-link"
-            >hello@kidguru.com</a
-          >
+          <a href="mailto:hello@kidguru.com" class="social-link">
+            <div class="social-img">
+              <img src="./img/twemoji_e-mail.svg" alt="" srcset="" />
+            </div>
+            hello@kidguru.com
+          </a>
         </div>
       </div>
     </div>

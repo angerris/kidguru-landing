@@ -1,24 +1,44 @@
 document.addEventListener("DOMContentLoaded", function () {
   const featureCards = document.querySelectorAll(".feature-card");
-  const featureImage = document.querySelector(".feature-image-wrapper img");
-  function updateCardImage(card) {
-    featureCards.forEach((card) => card.classList.remove("active"));
-    card.classList.add("active");
-    const newImage = card.getAttribute("data-image");
-    featureImage.classList.remove("loaded");
-    featureImage.src = `./img/${newImage}`;
-    featureImage.onload = () => {
-      featureImage.classList.add("loaded");
-    };
-  }
-  featureCards.forEach((card) => {
+  const featureImage = document.querySelector(".features-images img");
+
+  featureCards.forEach((card, index) => {
     card.addEventListener("click", function () {
-      updateCardImage(this);
+      featureCards.forEach((c) => c.classList.remove("active"));
+      card.classList.add("active");
+      featureImage.src = `./img/${index + 1}.svg`;
     });
   });
 
-  const activeCard = document.querySelector(".feature-card.active");
-  if (activeCard) {
-    updateCardImage(activeCard);
+  featureImage.src = "./img/1.svg";
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const controls = document.querySelectorAll(".feature-control");
+  const featureImage = document.getElementById("feature-image");
+  let currentFeature = 0;
+
+  function showFeature(index) {
+    controls.forEach((control, i) => {
+      control.classList.toggle("active", i === index);
+    });
+    const newImage = controls[index].getAttribute("data-image");
+    featureImage.src = `./img/${newImage}`;
   }
+
+  document.querySelectorAll(".arrow-left").forEach((arrow) => {
+    arrow.addEventListener("click", function () {
+      currentFeature = (currentFeature - 1 + controls.length) % controls.length;
+      showFeature(currentFeature);
+    });
+  });
+
+  document.querySelectorAll(".arrow-right").forEach((arrow) => {
+    arrow.addEventListener("click", function () {
+      currentFeature = (currentFeature + 1) % controls.length;
+      showFeature(currentFeature);
+    });
+  });
+
+  showFeature(currentFeature);
 });

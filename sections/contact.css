@@ -47,6 +47,11 @@
   color: #fff;
   font-weight: normal;
   outline: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
 }
 
 .social-link:hover {
