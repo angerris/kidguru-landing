@@ -4,7 +4,7 @@
   display: flex;
   overflow-y: hidden;
   z-index: 112;
-  margin-top: -10dvh;
+  margin-top: -6dvh;
   flex-direction: row;
 }
 .about-video {
