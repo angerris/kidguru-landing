@@ -6,6 +6,10 @@
     <title>Kidguru</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <div class="hero wrapper">
@@ -118,70 +122,66 @@
       </div>
     </div>
     <div class="features-mobile wrapper">
-      <div class="features-mobile-images">
-        <div class="arrow-left">
-          <img src="./img/arrowLeft.svg" alt="" srcset="" />
-        </div>
-        <img src="./img/1.png" alt="" width="300" id="feature-image" />
-        <div class="arrow-right">
-          <img src="./img/arrowRight.svg" alt="" srcset="" />
-        </div>
-      </div>
-      <div class="features-controls">
-        <div class="feature-control active" data-image="1.png">
-          <div class="feature-title-container">
+      <div class="swiper-container features-mobile-images">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./img/1.png" alt="" width="300" class="feature-image" />
             <div class="feature-control-title">Reference Book</div>
+            <ul class="feature-control-list">
+              <li>Comprehensive health and development information</li>
+              <li>Based on professional sources like WHO, AAP, etc</li>
+              <li>Tracks development from birth to age 18</li>
+            </ul>
           </div>
-          <ul class="feature-control-list">
-            <li>Comprehensive health and development information</li>
-            <li>Based on professional sources like WHO, AAP, etc</li>
-            <li>Tracks development from birth to age 18</li>
-          </ul>
-        </div>
-        <div class="feature-control" data-image="2.png">
-          <div class="feature-title-container">
+          <div class="swiper-slide">
+            <img src="./img/2.png" alt="" width="300" class="feature-image" />
             <div class="feature-control-title">Documents storage</div>
+            <ul class="feature-control-list">
+              <li>
+                Provides parents with constant access to their child’s health
+                information
+              </li>
+              <li>
+                Encryption of data accessible only to the account and its family
+              </li>
+              <li>Data storage in secure AWS cloud services</li>
+              <li>
+                TBD: certification for compliance with American and European
+                standards
+              </li>
+            </ul>
           </div>
-          <ul class="feature-control-list">
-            <li>
-              Provides parents with constant access to their child’s health
-              information
-            </li>
-            <li>
-              Encryption of data accessible only to the account and its family
-            </li>
-            <li>Data storage in secure AWS cloud services</li>
-            <li>
-              TBD: certification for compliance with American and European
-              standards
-            </li>
-          </ul>
-        </div>
-        <div class="feature-control" data-image="3.png">
-          <div class="feature-title-container">
+          <div class="swiper-slide">
+            <img src="./img/3.png" alt="" width="300" class="feature-image" />
             <div class="feature-control-title">Symptom calendar</div>
+            <ul class="feature-control-list">
+              <li>
+                Log symptoms, doctor appointments, medications, and vaccinations
+              </li>
+              <li>
+                Upload and share medical history and questionnaires with doctors
+              </li>
+            </ul>
           </div>
-          <ul class="feature-control-list">
-            <li>
-              Log symptoms, doctor appointments, medications, and vaccinations
-            </li>
-            <li>
-              Upload and share medical history and questionnaires with doctors
-            </li>
-          </ul>
-        </div>
-        <div class="feature-control" data-image="4.png">
-          <div class="feature-title-container">
+          <div class="swiper-slide">
+            <img src="./img/4.png" alt="" width="300" class="feature-image" />
             <div class="feature-control-title">Children’s Profile</div>
+            <ul class="feature-control-list">
+              <li>
+                A child profile enabling parents to share their child’s medical
+                information with their pediatrician
+              </li>
+              <li>Upload just in two clicks</li>
+            </ul>
           </div>
-          <ul class="feature-control-list">
-            <li>
-              A child profile enabling parents to share their child’s medical
-              information with their pediatrician
-            </li>
-            <li>Upload just in two clicks</li>
-          </ul>
         </div>
+        <div class="arrow-left">
+          <img src="./img/arrowLeft.svg" alt="Previous" />
+        </div>
+        <div class="arrow-right">
+          <img src="./img/arrowRight.svg" alt="Next" />
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
     <div class="slogan-section wrapper">
@@ -213,6 +213,7 @@
         </div>
       </div>
     </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

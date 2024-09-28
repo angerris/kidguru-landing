@@ -40,14 +40,15 @@ body {
   font-style: normal;
   font-size: 48px;
   text-align: center;
-  padding: 20px; /* Optional: Adds some padding inside the border */
+  padding: 20px;
 }
 
 .arrow-left,
 .arrow-right {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%); /* Center vertically */
+  top: 30%;
+  transform: translateY(-50%);
+  z-index: 10;
 }
 
 .arrow-left {
@@ -56,6 +57,33 @@ body {
 
 .arrow-right {
   right: 0;
+}
+.swiper-container {
+  width: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.swiper-wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+.swiper-slide {
+  padding: 0;
+  margin: 0;
+}
+
+.feature-control-title {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.feature-control-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
 }
 
 @media (min-width: 1600px) {

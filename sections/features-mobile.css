@@ -30,20 +30,21 @@
   text-transform: uppercase;
   text-align: center;
   flex-grow: 1;
+  width: 100%;
+  margin-bottom: 24px !important;
 }
 .feature-control-list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
   font-size: 14px;
   font-weight: 400;
   gap: 8px;
   padding: 0;
   list-style-type: none;
-  height: 260px;
-  border: 2px dashed rgba(0, 0, 0, 0.2);
-  padding: 10px;
+  height: 280px;
+  margin: 2px;
 }
 
 .feature-control-list li {
@@ -58,7 +59,7 @@
 .feature-control-list li::before {
   content: "\2714";
   position: absolute;
-  left: 0;
+  left: 5px;
   color: var(--primary-blue);
   font-size: 18px;
   font-weight: bold;
