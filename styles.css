@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap");
 @import url("./sections/hero.css");
 @import url("./sections/about.css");
 @import url("./sections/features.css");
@@ -25,6 +26,36 @@ body {
 
 .wrapper {
   padding: 60px;
+}
+.slogan-section {
+  height: 50dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slogan-section h3 {
+  color: var(--primary-blue);
+  font-family: "Oleo Script", system-ui;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 48px;
+  text-align: center;
+  padding: 20px; /* Optional: Adds some padding inside the border */
+}
+
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+}
+
+.arrow-left {
+  left: 0;
+}
+
+.arrow-right {
+  right: 0;
 }
 
 @media (min-width: 1600px) {
@@ -53,5 +84,8 @@ body {
 @media (max-width: 500px) {
   .wrapper {
     padding: 40px 20px;
+  }
+  .slogan-section h3 {
+    font-size: 32px;
   }
 }

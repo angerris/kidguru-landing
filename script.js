@@ -6,17 +6,18 @@ document.addEventListener("DOMContentLoaded", function () {
     card.addEventListener("click", function () {
       featureCards.forEach((c) => c.classList.remove("active"));
       card.classList.add("active");
-      featureImage.src = `./img/${index + 1}.svg`;
+      featureImage.src = `./img/${index + 1}.png`;
     });
   });
 
-  featureImage.src = "./img/1.svg";
+  featureImage.src = "./img/1.png";
 });
 
 document.addEventListener("DOMContentLoaded", function () {
   const controls = document.querySelectorAll(".feature-control");
   const featureImage = document.getElementById("feature-image");
   let currentFeature = 0;
+  let startX = 0;
 
   function showFeature(index) {
     controls.forEach((control, i) => {
@@ -38,6 +39,27 @@ document.addEventListener("DOMContentLoaded", function () {
       currentFeature = (currentFeature + 1) % controls.length;
       showFeature(currentFeature);
     });
+  });
+
+  const featuresContainer = document.querySelector(".features-mobile");
+  featuresContainer.addEventListener("touchstart", function (e) {
+    startX = e.touches[0].clientX;
+  });
+
+  featuresContainer.addEventListener("touchmove", function (e) {
+    const currentX = e.touches[0].clientX;
+    const diffX = startX - currentX;
+
+    if (Math.abs(diffX) > 200) {
+      if (diffX > 0) {
+        currentFeature = (currentFeature + 1) % controls.length;
+      } else {
+        currentFeature =
+          (currentFeature - 1 + controls.length) % controls.length;
+      }
+      showFeature(currentFeature);
+      startX = currentX;
+    }
   });
 
   showFeature(currentFeature);
