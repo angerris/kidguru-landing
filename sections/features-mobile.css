@@ -42,7 +42,7 @@
   padding: 0;
   list-style-type: none;
   height: 260px;
-  border: 2px dashed rgba(0, 0, 0, 0.2); /* Adds a dashed grey border */
+  border: 2px dashed rgba(0, 0, 0, 0.2);
   padding: 10px;
 }
 
@@ -51,15 +51,15 @@
   padding-left: 30px;
   font-size: 16px;
   font-weight: 500;
-  color: #333; /* Neutral color */
+  color: #333;
   line-height: 1.6;
 }
 
 .feature-control-list li::before {
-  content: "\2714"; /* Checkmark */
+  content: "\2714";
   position: absolute;
   left: 0;
-  color: var(--primary-blue); /* Soft green for checkmark */
+  color: var(--primary-blue);
   font-size: 18px;
   font-weight: bold;
 }
@@ -68,7 +68,14 @@
   margin-top: 8px;
 }
 
-/* Optional: Mobile adjustments */
+#feature-image {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.features-mobile-images {
+  overflow: hidden;
+}
+
 @media (max-width: 600px) {
   .feature-control-list {
     font-size: 14px;

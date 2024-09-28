@@ -41,12 +41,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  const featuresContainer = document.querySelector(".features-mobile");
+  const featuresContainer = document.querySelector(".features-mobile-images");
+
   featuresContainer.addEventListener("touchstart", function (e) {
     startX = e.touches[0].clientX;
+    e.preventDefault();
   });
 
   featuresContainer.addEventListener("touchmove", function (e) {
+    e.preventDefault();
     const currentX = e.touches[0].clientX;
     const diffX = startX - currentX;
 
@@ -60,6 +63,10 @@ document.addEventListener("DOMContentLoaded", function () {
       showFeature(currentFeature);
       startX = currentX;
     }
+  });
+
+  featuresContainer.addEventListener("touchend", function () {
+    startX = 0;
   });
 
   showFeature(currentFeature);
