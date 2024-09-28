@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const currentX = e.touches[0].clientX;
     const diffX = startX - currentX;
 
-    if (Math.abs(diffX) > 30) {
+    if (Math.abs(diffX) > 10) {
       if (diffX > 0) {
         currentFeature = (currentFeature + 1) % controls.length;
       } else {
