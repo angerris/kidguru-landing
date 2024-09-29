@@ -28,9 +28,9 @@ body {
   padding: 60px;
 }
 .slogan-section {
-  height: 50dvh;
+  height: 200px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 .slogan-section h3 {

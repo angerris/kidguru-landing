@@ -42,8 +42,7 @@
   font-weight: 400;
   gap: 8px;
   padding: 0;
-  height: 280px;
-  margin: 2px;
+  height: 240px;
   list-style-type: none;
 }
 .feature-control-list li + li {
